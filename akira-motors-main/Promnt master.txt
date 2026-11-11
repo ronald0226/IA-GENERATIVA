@@ -1,0 +1,98 @@
+Crea una página web en React y Tailwind CSS para la marca de motos de alta gama "AKIRA MOTORS", con temática cyberpunk Neo-Tokyo 2026 y soporte para modo oscuro y claro.
+
+La página debe incluir:
+
+1. Barra de navegación:
+   - Solo el logo oficial de la marca (sin texto repetido).
+   - Enlaces a las secciones: Inicio, AKR 1390, Catálogo, Experiencia y Concesionarios.
+   - Botones para activar/silenciar sonido de motor, cambiar de tema (claro/oscuro), iniciar sesión y agendar test drive.
+   - Menú móvil limpio con acceso directo a las secciones.
+
+2. Página de Inicio (con scroll horizontal en PC y vertical en móvil):
+   - Portada / Hero: Presentación impactante de la moto insignia AKR 1390 con animación de entrada.
+   - Ficha Técnica: Especificaciones clave (180 HP, 1.390 cc, 189 kg), tacómetro interactivo y tecnologías del modelo.
+   - Catálogo: 4 modelos (Sport, Adventure, Motocross y Enduro) con filtros por categoría, precios y acceso a ver detalles.
+   - Experiencia / ADN Akira: Manifiesto de la marca y datos de la red oficial en Colombia (+250 concesionarios), ajustado a la pantalla sin barras de scroll vertical.
+   - Concesionarios: Formulario por pasos para solicitar un Test Drive o visita técnica.
+
+3. Detalle de Moto (/motos/:slug):
+   - Galería con selector de colores interactivo.
+   - Ficha técnica completa y botón para escuchar el sonido real del motor.
+   - Calculadora de rutas con Google Maps: traza rutas predefinidas en Colombia o personalizadas, mostrando en el mapa los nombres exactos de Origen y Destino, y calculando consumo de combustible, paradas de tanqueo y tiempo de viaje con simulador.
+
+4. Compra y Reserva VIP (/comprar/:slug):
+   - Pasarela de reserva con selección de método de pago (tarjeta, PSE, crédito, crypto) y entrega en concesionario.
+
+5. Cuentas de Piloto:
+   - Ventana modal para registro de usuario por etapas e inicio de sesión persistente.
+
+Crea una aplicación web moderna, inmersiva y de alto impacto para la marca ficticia de motocicletas de alta gama "AKIRA MOTORS", con temática cyberpunk Neo-Tokyo 2026 y el eslogan: "El camino no está trazado. Lo defines tú."
+
+La aplicación debe construirse en React (TypeScript), Vite y Tailwind CSS, con arquitectura modular y las siguientes características y secciones:
+
+### 1. Identidad Visual y Sistema de Diseño (Cyberpunk Neo-Tokyo)
+- Paleta de color: Rojo Akira (#E5173E / #D4232D), Negro asfalto (#0D0D0D / #1E1E1E), Blanco puro y acentos en Amarillo arena (#F2E49B) y Teal (#54808B).
+- Soporte para Tema Oscuro (por defecto) y Tema Claro con alternador en la barra de navegación.
+- Tipografía: "Unbounded" para títulos de gran impacto y display, "Roboto" para textos y datos técnicos, y fuente monoespaciada para telemetría.
+- Elementos gráficos característicos: biseles diagonales afilados (clip-path chamfered cyber), corchetes técnicos HUD en esquinas de tarjetas, rejillas de fondo (cyber-grid), patrones de advertencia (hazard stripes) y marcas de agua kanji japonesas sutiles.
+
+### 2. Barra de Navegación Principal y Drawer Móvil
+- Cabecera fija superior con efecto backdrop-blur y borde técnico.
+- Logo oficial gráfico de Akira Motors (sin texto repetitivo adicional).
+- Menú de navegación horizontal para escritorio: Inicio, AKR 1390, Catálogo, Experiencia y Concesionarios.
+- Controles de utilidad:
+  - Botón para silenciar/activar el motor de sonido y audio real.
+  - Botón para alternar entre tema oscuro y tema claro.
+  - Botón de "Iniciar Sesión" / Badge de estado de piloto autenticado con dropdown para cerrar sesión.
+  - Botón de llamado a la acción destacado "Agenda tu Test Drive".
+- Menú hamburguesa móvil táctil (>=44px) que despliega un cajón lateral limpio con las 5 secciones principales enumeradas, con soporte de cierre por tecla Escape y toque de fondo.
+
+### 3. Página de Inicio con Scroll Horizontal (GSAP ScrollTrigger)
+- En pantallas grandes (>=1024px), las secciones principales transicionan mediante una experiencia fluida de scroll horizontal (500vw) con barra e indicador numérico de progreso (01 / 05). En dispositivos móviles, se adapta de forma vertical responsive.
+- Paneles incluidos en el recorrido:
+  1. Portada / Hero: Entrada animada de la moto insignia blanca y roja (AKR 1390), tipografía monumental, frase de impacto y accesos directos al modelo y catálogo.
+  2. Ficha Técnica / Specs (AKR 1390): Métricas destacadas (180 HP, 1.390 cc, 189 kg), barra tacométrica interactiva con simulación de corte a 10.500 RPM, acordeones de tecnologías (Quickshifter+, Winglets aerodinámicos, frenos Brembo Stylema) y sellos de garantía oficial.
+  3. Catálogo de Motos: Filtros interactivos por categoría (Todas, Sport, Adventure, Motocross, Enduro), tarjetas con ficha resumida (cc, hp, kg), precio en COP, efecto sonoro al pasar el cursor y enlace directo a la página de detalle de cada moto.
+  4. Experiencia / ADN Akira: Declaración de marca ("No construimos vehículos para encajar en la ciudad. Diseñamos máquinas para redibujar el mapa"), estadísticas de impacto (12 años en ruta, +250 concesionarios oficiales en Colombia, 210.000 pilotos) con contenedor ajustado a la pantalla sin barras de desplazamiento vertical.
+  5. Concesionarios & Test Drive: Formulario interactivo por pasos para elegir modelo, ingresar datos del piloto, ciudad en Colombia, tipo de prueba y pantalla de confirmación animada.
+
+### 4. Página de Detalle de Modelo (/motos/:slug)
+- Vista individual para cada modelo del catálogo (AKR 1390, AKR 990R, AKR 790, AKR 590N).
+- Selector dinámico de colores oficiales que actualiza en tiempo real la vista y especificaciones.
+- Reproductor de sonido real de motor para cada cilindrada utilizando archivos de audio MP3 reales y Web Audio API.
+- Acceso directo al botón de reserva "Comprar / Reservar Moto".
+
+### 5. Calculadora de Rutas y Telemetría en Vivo (Google Maps Platform)
+- Integración oficial con `@vis.gl/react-google-maps` (Routes API `Route.computeRoutes` y `DEMO_MAP_ID`).
+- Modos de ruta:
+  - 4 rutas predefinidas colombianas (Ruta Colonial Boyacense Bogotá-Villa de Leyva, Circuito de Oriente Medellín-Guatapé, Vía Costera del Caribe Barranquilla-Santa Marta, Travesía Eje Cafetero Cali-Salento).
+  - Trazado de ruta personalizada con resolvedor inteligente de municipios y ciudades de Colombia.
+- Marcadores interactivos `AdvancedMarker` anclados con precisión milimétrica al asfalto de la carretera, con chips visuales que indican claramente el nombre del punto de ORIGEN (A) y DESTINO (B).
+- Panel de telemetría dinámica según el modo de conducción (Eco, Touring, Sport):
+  - Distancia total y tiempo estimado de viaje.
+  - Consumo en litros y galones de combustible según la cilindrada de la moto.
+  - Porcentaje del tanque requerido y paradas de repostaje recomendadas.
+  - Estimación de costo en pesos colombianos (COP).
+- Simulador de viaje en tiempo real con barra de progreso y sonido de aceleración.
+- Detección global de errores de cuota (`OverQuotaMapError`) con banner no intrusivo en la parte superior.
+
+### 6. Sistema de Compra y Reserva VIP (/comprar/:slug)
+- Flujo de reserva exclusivo con selección de moto, color, concesionario oficial en Colombia y método de pago (Tarjeta de crédito, PSE, Financiación Akira Credit, Criptomonedas / USDT).
+- Formulario de datos de comprador con validación de documento, correo, teléfono y términos legales.
+- Resumen financiero de reserva, desglose de IVA y comprobante final de confirmación con código de reserva VIP generado.
+
+### 7. Sistema de Autenticación de Piloto (AuthContext & Modal)
+- Registro oficial de pilotos por etapas:
+  - Paso 1: Datos personales (nombres, apellidos, documento de identidad, fecha de nacimiento).
+  - Paso 2: Información de contacto (correo, teléfono móvil, ciudad, dirección).
+  - Paso 3: Credenciales de piloto (nombre de usuario único, contraseña segura con confirmación).
+  - Paso 4: Aceptación de términos y condiciones de telemetría y seguridad.
+- Inicio de sesión con usuario/correo y contraseña.
+- Persistencia de sesión en `localStorage` con bienvenida modal y panel de perfil de piloto en la navegación.
+
+### 8. Motor de Audio Sintetizado y Real (Web Audio API)
+- Sistema de audio que combina sintetizador Web Audio API para clics mecánicos, acoples y zumbidos de acelerador con archivos de audio MP3 reales para cada cilindrada.
+- Control global para activar o silenciar el sonido en cualquier momento desde la barra de navegación.
+
+### 9. Pie de Página (Footer)
+- Logotipo oficial, redes sociales, directorio del mapa del sitio, red de talleres oficiales en Colombia (Bogotá, Medellín, Cali, Barranquilla, Bucaramanga), formulario de suscripción a novedades y copyright 2026.

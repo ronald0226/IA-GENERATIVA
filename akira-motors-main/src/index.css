@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Akira Motors design system. Dark is default (:root); `.light` on <html> switches theme. */
+@theme inline {
+  --font-display: "Unbounded", "Roboto", sans-serif;
+  --font-sans: "Roboto", system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-deep: var(--primary-deep);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-sand: var(--sand);
+  --color-steel: var(--steel);
+  --color-teal: var(--teal);
+  --color-teal-deep: var(--teal-deep);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+/* Palette: E5173E / D4232D principal, 0A0A0A / 2D2D2D secundario,
+   F2E49B, 54808B, A6AAAB, 2E4F57 complementarios */
+:root {
+  --radius: 0px;
+  --background: oklch(0.155 0 0); /* #0D0D0D */
+  --foreground: oklch(1 0 0);
+  --card: oklch(0.225 0 0); /* #1E1E1E */
+  --card-foreground: oklch(1 0 0);
+  --popover: oklch(0.225 0 0);
+  --popover-foreground: oklch(1 0 0);
+  --primary: oklch(0.6 0.225 15); /* #E5173E */
+  --primary-deep: oklch(0.57 0.205 25); /* #D4232D */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.31 0 0); /* #2D2D2D */
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.225 0 0);
+  --muted-foreground: oklch(0.72 0.005 200); /* A6AAAB */
+  --accent: oklch(0.31 0 0);
+  --accent-foreground: oklch(1 0 0);
+  --sand: oklch(0.91 0.1 98); /* F2E49B */
+  --steel: oklch(0.72 0.005 200);
+  --teal: oklch(0.56 0.05 215); /* 54808B */
+  --teal-deep: oklch(0.4 0.04 215); /* 2E4F57 */
+  --destructive: oklch(0.6 0.225 15);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.6 0.225 15);
+}
+
+.light {
+  --background: oklch(0.975 0.005 85); /* #FAF8F5 */
+  --foreground: oklch(0.12 0 0); /* #111111 */
+  --card: oklch(1 0 0); /* #FFFFFF */
+  --card-foreground: oklch(0.12 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.12 0 0);
+  --primary: oklch(0.53 0.22 22); /* #D41838 */
+  --primary-deep: oklch(0.45 0.2 22);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.92 0.005 85); /* #EBE7E0 */
+  --secondary-foreground: oklch(0.12 0 0);
+  --muted: oklch(0.93 0.005 85); /* #ECE8E1 */
+  --muted-foreground: oklch(0.32 0.01 200); /* #353B3F */
+  --accent: oklch(0.92 0.005 85);
+  --accent-foreground: oklch(0.12 0 0);
+  --sand: oklch(0.42 0.12 65); /* #854D0E */
+  --steel: oklch(0.34 0.01 200);
+  --teal: oklch(0.38 0.08 215);
+  --teal-deep: oklch(0.25 0.05 215);
+  --destructive: oklch(0.53 0.22 22);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.15 0 0 / 18%);
+  --input: oklch(1 0 0);
+  --ring: oklch(0.53 0.22 22);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Cyberpunk sharp chamfered geometry & HUD utilities */
+.clip-cyber {
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+
+.clip-cyber-corner {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+}
+
+.clip-cyber-notch {
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+}
+
+.cyber-grid {
+  background-image: 
+    linear-gradient(to right, color-mix(in oklab, var(--color-foreground) 4%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--color-foreground) 4%, transparent) 1px, transparent 1px);
+  background-size: 3rem 3rem;
+}
+
+.cyber-hazard {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    color-mix(in oklab, var(--color-primary) 18%, transparent) 0,
+    color-mix(in oklab, var(--color-primary) 18%, transparent) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
+/* In light mode, ensure the Akira Motors white brand logo graphic has a dark base filter */
+.light .akira-brand-logo {
+  filter: brightness(0.15) contrast(140%);
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

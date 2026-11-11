@@ -1,0 +1,8 @@
+{
+  "name": "AKIRA MOTORS",
+  "description": "Descubre la AKR 1390 y el catálogo Akira Motors: Sport, Naked, Adventure y Urban. Calculadora de ruta y telemetría Google Maps y sonidos reales de motor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

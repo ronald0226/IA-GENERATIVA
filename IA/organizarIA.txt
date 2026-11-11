@@ -1,0 +1,78 @@
+Nombre: Ronald Stiwar Quinto Mosquera
+
+Actividad: Tres cupos, ocho estudiantes (Análisis de caso con uso de IA)
+1. Elección Individual (Mi propuesta inicial)
+
+Mis seleccionados: Ana, Camila y Hugo.
+
+Criterio personal: Elegí a estos tres compañeros porque considero que son los que mejor pueden aprovechar el acompañamiento. Tienen la disposición y el compromiso necesarios, pero enfrentan trabas concretas en su aprendizaje; con un seguimiento pedagógico adecuado pueden dar el salto para entender los temas, mejorar sus cualidades y subir sus notas.
+2. Primera Interacción con la IA
+Consulta realizada
+
+    En un curso de programación hay ocho estudiantes y solo tres cupos disponibles para un programa de acompañamiento. Tu equipo debe usar una IA para proponer quiénes deberían recibirlos. Estos son los datos del caso ficticio. Las notas van de 0 a 5 y se aprueba con 3.
+
+    Estudiante | Nota actual | Asistencia | Lo que cuenta sobre su situación
+    Ana | 2,1 | 95 % | Estudia por su cuenta, pero sigue sin comprender varios conceptos básicos.
+    Bruno | 2,8 | 65 % | Sus turnos de trabajo coinciden con algunas clases.
+    Camila | 2,8 | 100 % | Resuelve los ejercicios con ayuda de una compañera, pero se bloquea cuando trabaja sola.
+    Diego | 1,9 | 60 % | Ha faltado para cuidar a un familiar. Quiere continuar, pero se siente muy atrasado.
+    Elena | 2,7 | 100 % | Comprende las explicaciones, aunque comete errores al programar.
+    Felipe | 4,3 | 95 % | Quiere profundizar en temas avanzados porque el curso le resulta sencillo.
+    Gabriela | 2,6 | 80 % | Comparte computador en casa y casi no puede practicar.
+    Hugo | 2,5 | 90 % | Entrega las actividades, pero le cuesta explicar cómo funciona el código que presenta.
+
+    Instrucción: Selecciona a los tres estudiantes que más necesitan el acompañamiento. Justifica cada elección y explica por qué dejaste fuera a los demás.
+
+Respuesta de la IA
+
+La IA propuso a Ana, Diego y Hugo bajo un criterio de urgencia académica e impacto directo:
+
+    Ana: Destaca su asistencia del 95% y su esfuerzo autónomo, señalando que requiere la tutoría para destrabar los conceptos básicos que no ha podido asimilar sola.
+
+    Diego: Prioriza su caso por tener la nota más baja (1,9) y presentar un alto riesgo de deserción tras ausentarse por cuidar a un familiar.
+
+    Hugo: Identifica una falla en su proceso pedagógico al entregar código que no sabe explicar, requiriendo apoyo para desarrollar lógica propia.
+
+Exclusión del resto:
+
+    Felipe (4,3): Su objetivo es profundizar en temas avanzados; no está en riesgo de reprobar y el programa busca nivelar.
+
+    Bruno (2,8): Su barrera es de horarios laborales; sumar sesiones sincrónicas complicaría su agenda.
+
+    Gabriela (2,6): Su necesidad principal es de infraestructura (acceso a un computador), no tanto una intervención académica.
+
+    Camila (2,8): Presenta un bloqueo de confianza individual, pero sus notas y asistencia perfecta muestran que asimila la materia.
+
+    Elena (2,7): Entiende la teoría y sus fallas son de digitación, lo cual se soluciona acumulando horas de práctica autónoma.
+
+Mis observaciones a la primera respuesta
+
+    Interpretación empática: La IA abordó el "necesitar acompañamiento" enfocado en las dificultades y necesidades humanas de cada estudiante.
+
+    Análisis global: Integró la nota, la asistencia y el contexto individual para argumentar la elección de forma completa.
+
+    Precisión: Respondió de manera directa y ajustada a la consigna.
+
+    Sin preguntas adicionales: Trabajó de entrada con la información suministrada sin pedir datos extra.
+
+3. Segunda Interacción con la IA (Con información del Programa A)
+Consulta realizada
+
+    [Se reingresó la información del curso agregando la siguiente aclaración del programa]:
+
+    Información adicional sobre el programa:
+    PROGRAMA A: Preparación para el examen. Dos sesiones de dos horas antes del examen de la próxima semana. El propósito es apoyar a estudiantes para que alcancen la nota mínima de aprobación: 3. Los ocho estudiantes pueden asistir a las dos sesiones. Hay computadores disponibles durante las sesiones. No hay préstamo de equipos ni acompañamiento después del examen.
+
+Respuesta de la IA
+
+Al considerar la disponibilidad de computadores durante las sesiones del taller, la IA ajustó su selección a Gabriela, Diego y Ana:
+
+    Gabriela: Pasa a ser prioridad porque el taller le brinda el acceso a un computador que no tiene en casa para practicar antes del examen.
+
+    Diego: Se mantiene en la lista por tener el atraso más crítico (1,9) y estar en riesgo alto de deserción.
+
+    Ana: Se mantiene debido a la distancia entre su alto nivel de compromiso (95% asistencia) y su falta de comprensión teórica (2,1).
+
+Ajuste en las exclusiones:
+
+    Bruno (2,8): Al estar muy cerca de la nota mínima (3,0) y contar con la opción de asistir a las sesiones abiertas de repaso, su caso se puede gestionar en el espacio general sin restar un cupo prioritario.
